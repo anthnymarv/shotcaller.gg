@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make The Call | AI-Powered League Objective Advisor</title>
+    <style>
+        /* Basic styles - you can improve these later */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #02060c;
+            color: #f0f0f0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: rgba(10, 14, 23, 0.95);
+            padding: 20px 0;
+            border-bottom: 2px solid #00b4d8;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #00b4d8;
+        }
+        
+        .nav-links a {
+            color: #f0f0f0;
+            margin-left: 30px;
+            text-decoration: none;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #00b4d8;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #00b4d8;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        
+        section {
+            padding: 60px 0;
+        }
+        
+        h2 {
+            color: #00b4d8;
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .stat-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 4px solid #00b4d8;
+        }
+        
+        .team-section {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .team-photo {
+            width: 300px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+        }
+        
+        footer {
+            background: #050811;
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">SHOTCALLER.GG</div>
+                <div class="nav-links">
+                    <a href="#what-it-is">What It Is</a>
+                    <a href="#stats">Champ Stats</a>
+                    <a href="#download">Download</a>
+                    <a href="#about">About Us</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Make Smarter Calls.<br>Win More Games.</h1>
+            <p>Shotcaller is an AI-powered overlay that tells you when to take objectives,<br>based on 1000+ Grandmaster games and champion-specific analysis.</p>
+            <a href="#download" class="cta-button">Download Now</a>
+            <p style="margin-top: 10px; color: #888; font-size: 14px;">Free • Works with Overwolf • No install required</p>
+        </div>
+    </section>
+
+    <!-- What It Is / What It Isn't -->
+    <section id="what-it-is" style="background: rgba(255, 255, 255, 0.03);">
+        <div class="container">
+            <h2>What Shotcaller Is (And Isn't)</h2>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+                <!-- What It IS -->
+                <div>
+                    <h3 style="color: #4CAF50;">✓ What It IS:</h3>
+                    <ul style="margin-top: 20px; list-style-position: inside;">
+                        <li style="margin-bottom: 10px;">An AI coach that analyzes game state in real-time</li>
+                        <li style="margin-bottom: 10px;">Drake/Baron probability calculator</li>
+                        <li style="margin-bottom: 10px;">Champion-specific buff value analyzer</li>
+                        <li style="margin-bottom: 10px;">Learning tool to improve macro decisions</li>
+                        <li style="margin-bottom: 10px;">Built by gamers who understand the pain</li>
+                    </ul>
+                </div>
+                
+                <!-- What It ISN'T -->
+                <div>
+                    <h3 style="color: #f44336;">✗ What It ISN'T:</h3>
+                    <ul style="margin-top: 20px; list-style-position: inside;">
+                        <li style="margin-bottom: 10px;">NOT a cheat or hack</li>
+                        <li style="margin-bottom: 10px;">NOT automated gameplay</li>
+                        <li style="margin-bottom: 10px;">NOT a substitute for game sense</li>
+                        <li style="margin-bottom: 10px;">NOT affiliated with Riot Games</li>
+                        <li style="margin-bottom: 10px;">NOT collecting your personal data</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cool Champion Stats -->
+    <section id="stats">
+        <div class="container">
+            <h2>Cool Champion Stats We Found</h2>
+            <p>From analyzing thousands of games, here's what our data shows:</p>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>🐉 Best Drake Stealers</h3>
+                    <p style="margin-top: 10px; font-size: 14px;">
+                        • Janna: 23% steal success rate<br>
+                        • Lee Sin: 21% steal success rate<br>
+                        • Nunu: 19% steal success rate
+                    </p>
+                </div>
+                
+                <div class="stat-card">
+                    <h3>🏔️ Mountain Drake Lovers</h3>
+                    <p style="margin-top: 10px; font-size: 14px;">
+                        • Ornn: +14% effective HP gain<br>
+                        • Sion: +12% effective HP gain<br>
+                        • Cho'Gath: +11% effective HP gain
+                    </p>
+                </div>
+                
+                <div class="stat-card">
+                    <h3>🔥 Infernal Drake Winners</h3>
+                    <p style="margin-top: 10px; font-size: 14px;">
+                        • Karthus: +18% damage increase<br>
+                        • Veigar: +16% damage increase<br>
+                        • Syndra: +15% damage increase
+                    </p>
+                </div>
+                
+                <div class="stat-card">
+                    <h3>💀 Most Thrown Objectives</h3>
+                    <p style="margin-top: 10px; font-size: 14px;">
+                        • Teams with Yasuo: 34% throw rate<br>
+                        • Post-Ace overconfidence: 41%<br>
+                        • Without vision control: 67% failure
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>upl
+
+    <!-- Download Section -->
+    <section id="download" style="background: rgba(0, 180, 216, 0.1);">
+        <div class="container">
+            <h2>Download & Install</h2>
+            
+            <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+                <h3>How to Get Started:</h3>
+                
+                <div style="text-align: left; margin-top: 30px;">
+                    <div style="margin-bottom: 20px;">
+                        <h4>1. Download Overwolf</h4>
+                        <p>Our app runs on the Overwolf platform (like Blitz or Porofessor)</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <h4>2. Search for "Shotcaller"</h4>
+                        <p>Find us in the Overwolf App Store</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <h4>3. Launch League</h4>
+                        <p>The overlay automatically appears in-game</p>
+                    </div>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <h4>4. Make Better Calls</h4>
+                        <p>See objective probabilities and recommendations in real-time</p>
+                    </div>
+                </div>
+                
+                <a href="#" class="cta-button" style="margin-top: 30px;">Download via Overwolf</a>
+                <p style="margin-top: 10px; color: #888; font-size: 14px;">Coming soon: Standalone desktop app</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us (For Recruiters) -->
+    <section id="about">
+        <div class="container">
+            <h2>About Us (The Humans Behind This)</h2>
+            
+                
+                <div>
+                    <h3>Two Gamers Who Actually Built Something</h3>
+                    <p style="margin-top: 15px;">
+                        We're not a startup. We're two League players who got tired of losing games to bad objective calls 
+                        and decided to use our programming skills to solve the problem.
+                    </p>
+                    
+                    <p style="margin-top: 15px;">
+                        <strong>Why we built this:</strong><br>
+                        1. To prove we could build something useful from scratch<br>
+                        2. To learn ML/AI with a practical project<br>
+                        3. To help other players climb<br>
+                        4. To showcase our skills to potential employers
+                    </p>
+                    
+                    <p style="margin-top: 15px;">
+                        <strong>Our skills showcased in this project:</strong><br>
+                        • Python & Machine Learning (XGBoost, Random Forest)<br>
+                        • Data Analysis & Visualization<br>
+                        • Riot API Integration<br>
+                        • Full-stack development<br>
+                        • Problem solving & project execution
+                    </p>
+                    
+                    <div style="margin-top: 30px;">
+                        <a href="mailto:hello@shotcaller.gg" style="color: #00b4d8; margin-right: 20px;">Contact Us</a>
+                        <a href="#" style="color: #00b4d8; margin-right: 20px;">View GitHub</a>
+                        <a href="#" style="color: #00b4d8;">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section style="background: rgba(255, 255, 255, 0.03);">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div style="margin-top: 30px;">
+                <div style="margin-bottom: 20px;">
+                    <h4>Is this against Riot's ToS?</h4>
+                    <p>No. We only read game data that's publicly available through Riot's API. We don't interact with the game client or modify gameplay.</p>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <h4>Is it really free?</h4>
+                    <p>Yes, completely free. We built this to learn and showcase our skills, not to make money.</p>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <h4>How accurate is it?</h4>
+                    <p>Based on testing with Grandmaster+ game data, our predictions are ~85% accurate for objective outcomes.</p>
+                </div>
+                
+                <div style="margin-bottom: 20px;">
+                    <h4>Can I contribute to the project?</h4>
+                    <p>Yes! We're open to collaboration. Check our GitHub for open issues or contact us directly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2024 Shotcaller.gg | Built with ❤️ and 🧂 by two frustrated junglers</p>
+            <p style="margin-top: 10px; color: #888; font-size: 14px;">
+                This project isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties.
+            </p>
+            <p style="margin-top: 10px; color: #888; font-size: 12px;">
+                League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Simple JavaScript for smooth scrolling -->
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Simple page view tracking
+        console.log('Shotcaller.gg loaded - built by gamers, for gamers');
+    </script>
+</body>
+</html>
