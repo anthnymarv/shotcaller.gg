@@ -1,0 +1,9 @@
+api.env
+.env
+data/
+models/
+model/
+__pycache__/
+*.pyc
+*.pkl
+*.joblib
