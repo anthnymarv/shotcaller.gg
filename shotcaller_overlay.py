@@ -131,11 +131,13 @@ def build_game_state(feature_names: List[str]) -> Optional[Dict]:
     ally_tag  = local_team
     enemy_tag = 'CHAOS' if ally_tag == 'ORDER' else 'ORDER'
 
-    ally  = {'level': 0, 'alive': 0, 'cs': 0, 'items': 0}
+    ally  = {'currentHealth': 0, 'maxHealth': 0, 'level': 0, 'alive': 0, 'cs': 0, 'items': 0}
     enemy = {'level': 0, 'alive': 0, 'cs': 0, 'items': 0}
 
     for p in players:
         b = ally if p.get('team') == ally_tag else enemy
+        b['currentHealth'] = p.get('currentHealth', 0)
+        b['maxHealth'] = p.get('maxHealth', 0)
         b['level'] += p.get('level', 1)
         b['cs']    += p.get('scores', {}).get('creepScore', 0)
         if not (p.get('isDead', False) or p.get('respawnTimer', 0) > 0):
@@ -193,6 +195,8 @@ def build_game_state(feature_names: List[str]) -> Optional[Dict]:
             break
 
     state = {
+        'self_health':           active['currentHealth'],
+        'ally_health':           ally['currentHealth']/ ally['maxHealth'],
         'level_diff':            ally['level']  - enemy['level'],
         'ally_alive':            ally['alive'],
         'enemy_alive':           enemy['alive'],
